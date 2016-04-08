@@ -12,5 +12,8 @@
  * @author Sylvain
  */
 class ApplicationTest {
-    //Tu me fais chier comme garçon Sylvain
-} 
+    //put your code here
+}
+ /*AAAAAAAAAAAAAAAAAHSFNZS 
+ CA MARCHE !!!
+Tu es sur ?*/
