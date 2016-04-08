@@ -13,5 +13,4 @@
  */
 class ApplicationTest {
     //put your code here
-}
- AAAAAAAAAAAAAAAAAHSFNZS 
+} 
