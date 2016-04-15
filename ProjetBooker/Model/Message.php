@@ -6,7 +6,27 @@ require_once(realpath(dirname(__FILE__)) . '/Contact.php');
  * @access public
  * @author Joris
  */
-class Messagerie {
+class Message {
+	/**
+	 * @AttributeType int
+	 */
+	private $_conversationID;
+	/**
+	 * @AttributeType int
+	 */
+	private $_contactIDDest;
+	/**
+	 * @AttributeType int
+	 */
+	private $_contactIDExp;
+	/**
+	 * @AttributeType string
+	 */
+	private $_objet;
+	/**
+	 * @AttributeType string
+	 */
+	private $_corpsMessage;
 	/**
 	 * @AssociationType Application
 	 */
@@ -16,6 +36,11 @@ class Messagerie {
 	 * @AssociationMultiplicity 1..*
 	 */
 	public $_contacts = array();
+	/**
+	 * @AssociationType Contact
+	 * @AssociationMultiplicity 1
+	 */
+	public $_emetteur;
 
 	/**
 	 * @access public

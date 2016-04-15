@@ -6,6 +6,7 @@ require_once(realpath(dirname(__FILE__)) . '/Contact.php');
  * @author Joris
  */
 class Tag {
+	private $_classique;
 	private $_jazz;
 	private $_blues;
 	private $_pop_rock;

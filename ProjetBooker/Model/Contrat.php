@@ -18,7 +18,8 @@ class Contrat extends DocAdministratif {
 	public $_unnamed_Groupe_;
 	/**
 	 * @AssociationType FicheSalaire
+	 * @AssociationMultiplicity 1..*
 	 */
-	public $_unnamed_FicheSalaire_;
+	public $_ficheSalaire = array();
 }
 ?>

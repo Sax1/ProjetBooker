@@ -1,9 +1,10 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/Agenda.php');
+require_once(realpath(dirname(__FILE__)) . '/Tache.php');
 require_once(realpath(dirname(__FILE__)) . '/Lieu.php');
-require_once(realpath(dirname(__FILE__)) . '/Messagerie.php');
+require_once(realpath(dirname(__FILE__)) . '/Message.php');
 require_once(realpath(dirname(__FILE__)) . '/DocAdministratif.php');
 require_once(realpath(dirname(__FILE__)) . '/Contact.php');
+require_once(realpath(dirname(__FILE__)) . '/Evenement.php');
 
 /**
  * @access public
@@ -11,18 +12,16 @@ require_once(realpath(dirname(__FILE__)) . '/Contact.php');
  */
 class Application {
 	/**
-	 * @AssociationType Agenda
-	 * @AssociationMultiplicity 1
-	 * @AssociationKind Composition
+	 * @AssociationType Tache
 	 */
-	public $_agenda;
+	public $_unnamed_Tache_;
 	/**
 	 * @AssociationType Lieu
-	 * @AssociationMultiplicity 1..*
+	 * @AssociationMultiplicity *
 	 */
 	public $_lieux = array();
 	/**
-	 * @AssociationType Messagerie
+	 * @AssociationType Message
 	 * @AssociationMultiplicity 1
 	 * @AssociationKind Composition
 	 */
@@ -35,9 +34,16 @@ class Application {
 	public $_listeDocs = array();
 	/**
 	 * @AssociationType Contact
-	 * @AssociationMultiplicity 1..*
+	 * @AssociationMultiplicity *
+	 * @AssociationKind Composition
 	 */
 	public $_contacts = array();
+	/**
+	 * @AssociationType Evenement
+	 * @AssociationMultiplicity 1
+	 * @AssociationKind Composition
+	 */
+	public $_agenda;
 
 	/**
 	 * @access public
@@ -54,6 +60,24 @@ class Application {
 	 * @ReturnType collection
 	 */
 	public function trierContacts() {
+		// Not yet implemented
+	}
+
+	/**
+	 * @access public
+	 * @return void
+	 * @ReturnType void
+	 */
+	public function creerEvent() {
+		// Not yet implemented
+	}
+
+	/**
+	 * @access public
+	 * @return void
+	 * @ReturnType void
+	 */
+	public function enregistrerContact() {
 		// Not yet implemented
 	}
 }

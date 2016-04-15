@@ -9,7 +9,8 @@ require_once(realpath(dirname(__FILE__)) . '/DocAdministratif.php');
 class FicheSalaire extends DocAdministratif {
 	/**
 	 * @AssociationType Contrat
+	 * @AssociationMultiplicity 1
 	 */
-	public $_unnamed_Contrat_;
+	public $_contrat;
 }
 ?>

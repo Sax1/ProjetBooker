@@ -1,5 +1,4 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/Commande.php');
 require_once(realpath(dirname(__FILE__)) . '/Contact.php');
 require_once(realpath(dirname(__FILE__)) . '/Lieu.php');
 
@@ -9,19 +8,15 @@ require_once(realpath(dirname(__FILE__)) . '/Lieu.php');
  */
 class Partenaire extends Contact {
 	/**
-	 * @AssociationType Commande
+	 * @AssociationType Contact
 	 * @AssociationMultiplicity *
 	 */
-	public $_commandes = array();
-	/**
-	 * @AssociationType Contact
-	 */
-	public $_unnamed_Contact_;
+	public $_contacts = array();
 	/**
 	 * @AssociationType Lieu
-	 * @AssociationMultiplicity 1
+	 * @AssociationMultiplicity *
 	 */
-	public $_lieu;
+	public $_lieu = array();
 
 	/**
 	 * @access public

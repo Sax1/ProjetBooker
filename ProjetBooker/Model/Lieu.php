@@ -9,9 +9,21 @@ require_once(realpath(dirname(__FILE__)) . '/Evenement.php');
  */
 class Lieu {
 	/**
+	 * @AttributeType int
+	 */
+	private $_lieuID;
+	/**
+	 * @AttributeType string
+	 */
+	private $_nom;
+	/**
 	 * @AttributeType string
 	 */
 	private $_adresse;
+	/**
+	 * @AttributeType string
+	 */
+	private $_description;
 	/**
 	 * @AssociationType Application
 	 */

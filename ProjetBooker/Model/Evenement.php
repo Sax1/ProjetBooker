@@ -1,14 +1,17 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/Agenda.php');
-require_once(realpath(dirname(__FILE__)) . '/Date.php');
+require_once(realpath(dirname(__FILE__)) . '/Application.php');
+require_once(realpath(dirname(__FILE__)) . '/Tache.php');
 require_once(realpath(dirname(__FILE__)) . '/Lieu.php');
-require_once(realpath(dirname(__FILE__)) . '/Commande.php');
 
 /**
  * @access public
  * @author Joris
  */
 class Evenement {
+	/**
+	 * @AttributeType int
+	 */
+	private $_eventID;
 	/**
 	 * @AttributeType string
 	 */
@@ -18,24 +21,34 @@ class Evenement {
 	 */
 	private $_typeMusique;
 	/**
-	 * @AssociationType Agenda
+	 * @AttributeType string
 	 */
-	public $_unnamed_Agenda_;
+	private $_dateDebut;
 	/**
-	 * @AssociationType Date
+	 * @AttributeType string
 	 */
-	public $_unnamed_Date_;
+	private $_dateFin;
+	/**
+	 * @AttributeType string
+	 */
+	private $_note;
+	/**
+	 * @AttributeType int
+	 */
+	private $_tacheID;
+	/**
+	 * @AssociationType Application
+	 */
+	public $_unnamed_Application_;
+	/**
+	 * @AssociationType Tache
+	 */
+	public $_unnamed_Tache_;
 	/**
 	 * @AssociationType Lieu
-	 * @AssociationMultiplicity 0..1
+	 * @AssociationMultiplicity 1..*
 	 */
-	public $_lieu;
-	/**
-	 * @AssociationType Commande
-	 * @AssociationMultiplicity *
-	 * @AssociationKind Composition
-	 */
-	public $_commandes = array();
+	public $_lieu = array();
 
 	/**
 	 * @access public

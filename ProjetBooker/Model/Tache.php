@@ -1,5 +1,8 @@
 <?php
-require_once(realpath(dirname(__FILE__)) . '/Agenda.php');
+require_once(realpath(dirname(__FILE__)) . '/Groupe.php');
+require_once(realpath(dirname(__FILE__)) . '/Application.php');
+require_once(realpath(dirname(__FILE__)) . '/DocAdministratif.php');
+require_once(realpath(dirname(__FILE__)) . '/Evenement.php');
 
 /**
  * @access public
@@ -7,17 +10,44 @@ require_once(realpath(dirname(__FILE__)) . '/Agenda.php');
  */
 class Tache {
 	/**
-	 * @AssociationType Agenda
+	 * @AttributeType int
 	 */
-	public $_unnamed_Agenda_;
-
+	private $_tacheId;
 	/**
-	 * @access public
-	 * @return void
-	 * @ReturnType void
+	 * @AttributeType string
 	 */
-	public function fixerRelance() {
-		// Not yet implemented
-	}
+	private $_note;
+	/**
+	 * @AttributeType date
+	 */
+	private $_dateEch;
+	/**
+	 * @AttributeType int
+	 */
+	private $_documentID;
+	/**
+	 * @AttributeType int
+	 */
+	private $_evenementID;
+	/**
+	 * @AttributeType int
+	 */
+	private $_contactID;
+	/**
+	 * @AssociationType Groupe
+	 */
+	public $_unnamed_Groupe_;
+	/**
+	 * @AssociationType Application
+	 */
+	public $_unnamed_Application_;
+	/**
+	 * @AssociationType DocAdministratif
+	 */
+	public $_unnamed_DocAdministratif_;
+	/**
+	 * @AssociationType Evenement
+	 */
+	public $_unnamed_Evenement_;
 }
 ?>

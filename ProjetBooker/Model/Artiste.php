@@ -11,5 +11,9 @@ class Artiste extends Contact {
 	 * @AssociationType Groupe
 	 */
 	public $_unnamed_Groupe_;
+	/**
+	 * @AssociationType Groupe
+	 */
+	public $_unnamed_Groupe_2;
 }
 ?>
